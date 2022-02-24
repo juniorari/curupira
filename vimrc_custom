@@ -1,0 +1,6 @@
+" No more <SHIFT>-:
+nnoremap ; :
+nnoremap : ;
+
+" specific to tagbar plugin
+nnoremap <silent> <F9> :TagbarToggle<CR>

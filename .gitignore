@@ -1,0 +1,11 @@
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+*.pyc
+
+.DS_Store
+Thumbs.db:encryptable
+Thumbs.db
