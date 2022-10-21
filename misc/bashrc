@@ -159,3 +159,13 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
+# Check if docker is running
+if [ "$( docker ps -q )" == "" ]; then
+    inventory && make up && make docs
+else 
+    echo "Inventory rodando ;-)"
+fi
+
+
+
