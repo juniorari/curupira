@@ -87,7 +87,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ll='ls -alF'
+alias ll='ls -alh'
 alias la='ls -A'
 alias l='ls -CF'
 
@@ -122,50 +122,37 @@ fi
 source /etc/environment
 
 
-alias code='cd /home/code/'
-alias copec='cd /home/code/copec/'
-alias copec-up='cd /home/code/copec/ && dc-up && cd -'
-alias linx='cd /var/www/html/'
-alias inventory='cd /var/www/html/newoffers-inventory'
-alias chubaca='cd /var/www/html/chubaca'
-alias infra='cd /var/www/html/newoffers-infra/ansible'
-alias sfc='cd /home/code/sfc/'
-alias sfc-up='cd /home/code/sfc/ && dc-up && cd -'
+
+alias e='cd /mnt/E/'
+alias code='cd /mnt/E/code/'
+alias copec='cd /mnt/E/code/copec/'
+alias copec-up='copec && dc-up && cd -'
+alias sfc='cd /mnt/E/flex/sfc/'
+alias sfc-up='sfc && dc-up && cd -'
 alias dc-up='docker-compose up -d'
 alias dc-stop='docker-compose stop'
 alias dc-stop-all='docker stop $(docker ps -q)'
 alias dc-down='docker-compose down'
 alias html='cd /var/www/html/'
+# alias linx='e && cd linx/'
+# alias inventory='cd /mnt/E/linx/newoffers-inventory/'
+# alias packages='linx && cd newoffers-packages/'
+# alias chubaca='e && cd chubaca'
 
+alias rmd='rm -Rf '
 
-export AWS_ACCESS_KEY_ID="ASIAQ55NHU4CQQPFZPNH"
-export AWS_SECRET_ACCESS_KEY="VYo12eFYbAD2My8zDjaOHiRnDI12L+SUCHYQmoi3"
-export AWS_SESSION_TOKEN="IQoJb3JpZ2luX2VjEMn//////////wEaCXVzLWVhc3QtMSJIMEYCIQCVeHtyYkakh0ixUdgNU0Vj1RGAoC9incS+v3gqICKiVwIhAJe40cngxvp5sz/f88D7fyhaoM0yFjX2+aKTC6ns5rTwKqQDCDIQBBoMMDY0MjUwOTQ3MzMzIgxGbfc/18m1l7QyVmUqgQMUMSwBkl54lz8Xcedws3XPUo7JPyKH81iPgJgG8ilif7ptYlLUP4hsorqHo3Y+7eyo/XjTI2Qrzm0lFbFBHNBI7zYwFuaXwGY6nW+Q5+fjIgOhzjXerbMP8gADmRWoG+z4KeanjWWSUdKclSB1ErJ/HX+1jziuXfPYp5Lfab74wBSMtGYlmNzyqphJ9YmdAJN07Cm6rDalow8LtfjPfOsPxDWKkmTu58Hhr942eNagwjefiZ/K6mo4Sdl3HhbAU+DqzL0f1Ldl6gn5RBmOzAWHC7aBHpRFhhbIz262bQKL4TTcaNmBSq6NOzzfxXZ0tb9V/1TR8Dk5Ck2itvz5DsPJl0C88K3QsdsOgI5NYUarcKKBa3ShqXX2DDrRMf0oSAK2vdIuQjVN/U5L6moOSbIktjpuJxs+rxJL6lZvttqK0NEbqGEod6yEp/O8iLeV4wK2VBYZh7KwW+58Bxzry4VX7I435jtvdmHzqm0aSHxSU6XIB2+KBGiJczIRRrYvCA6EMNPjsooGOqUBv1CFPnZ55k5lu94tthBuSfpjch6JYegruu2s3wTM/w/vDduLcFRBn/ea3WrpJyd7fy4hD2L9LNqCPXp+r0w2gPlVdw7L54a0AmsBymwMf1tqHLeqHmufCv4U2qrxFS3O/tI0G9+Msqi+GSqEyI97lFDMB67nBTfTdVXY/QyJT5ZRP+MZloPOl+BqjAsgIqQELMLBABcA18+cBG4pIRafgMbRPS3h"
-export IP="127.0.0.1"
-
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/jose-ari/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/jose-ari/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/jose-ari/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/jose-ari/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-
-# Check if docker is running
-if [ "$( docker ps -q )" == "" ]; then
-    inventory && make up && make docs
-else 
-    echo "Inventory rodando ;-)"
-fi
+# export AWS_ACCESS_KEY_ID="ASIAQ55NHU4CQQPFZPNH"
+# export AWS_SECRET_ACCESS_KEY="VYo12eFYbAD2My8zDjaOHiRnDI12L+SUCHYQmoi3"
+# export AWS_SESSION_TOKEN="IQoJb3JpZ2luX2VjEMn//////////wEaCXVzLWVhc3QtMSJIMEYCIQCVeHtyYkakh0ixUdgNU0Vj1RGAoC9incS+v3gqICKiVwIhAJe40cngxvp5sz/f88D7fyhaoM0yFjX2+aKTC6ns5rTwKqQDCDIQBBoMMDY0MjUwOTQ3MzMzIgxGbfc/18m1l7QyVmUqgQMUMSwBkl54lz8Xcedws3XPUo7JPyKH81iPgJgG8ilif7ptYlLUP4hsorqHo3Y+7eyo/XjTI2Qrzm0lFbFBHNBI7zYwFuaXwGY6nW+Q5+fjIgOhzjXerbMP8gADmRWoG+z4KeanjWWSUdKclSB1ErJ/HX+1jziuXfPYp5Lfab74wBSMtGYlmNzyqphJ9YmdAJN07Cm6rDalow8LtfjPfOsPxDWKkmTu58Hhr942eNagwjefiZ/K6mo4Sdl3HhbAU+DqzL0f1Ldl6gn5RBmOzAWHC7aBHpRFhhbIz262bQKL4TTcaNmBSq6NOzzfxXZ0tb9V/1TR8Dk5Ck2itvz5DsPJl0C88K3QsdsOgI5NYUarcKKBa3ShqXX2DDrRMf0oSAK2vdIuQjVN/U5L6moOSbIktjpuJxs+rxJL6lZvttqK0NEbqGEod6yEp/O8iLeV4wK2VBYZh7KwW+58Bxzry4VX7I435jtvdmHzqm0aSHxSU6XIB2+KBGiJczIRRrYvCA6EMNPjsooGOqUBv1CFPnZ55k5lu94tthBuSfpjch6JYegruu2s3wTM/w/vDduLcFRBn/ea3WrpJyd7fy4hD2L9LNqCPXp+r0w2gPlVdw7L54a0AmsBymwMf1tqHLeqHmufCv4U2qrxFS3O/tI0G9+Msqi+GSqEyI97lFDMB67nBTfTdVXY/QyJT5ZRP+MZloPOl+BqjAsgIqQELMLBABcA18+cBG4pIRafgMbRPS3h"
+# export IP="127.0.0.1"
+#
+#
+#
+# if [ "$( docker ps -q )" == "" ]; then
+#     echo -e '\ninventory && make up && make docs\n'
+# else
+#     echo -e 'Inventory rodando ;-)\n'
+# fi
 
 
 

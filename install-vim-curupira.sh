@@ -4,7 +4,7 @@ curupira=$(pwd) # TODO better word directory awareness
 
 miscdots=(
     'bashrc'
-    'gitconfig'
+#    'gitconfig'
     'gitignore_global'
     'inputrc'
     'tmux.conf'
@@ -45,9 +45,9 @@ function create_symlinks {
         ln -s $curupira/misc/$i "$HOME/.$i"
     done
 
-    for i in ${vimdots[@]}; do
-        ln -s $curupira/$i "$HOME/.$i"
-    done
+    #for i in ${vimdots[@]}; do
+    #    ln -s $curupira/$i "$HOME/.$i"
+    #done
 }
 
 

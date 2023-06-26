@@ -9,3 +9,5 @@ Session.vim
 .DS_Store
 Thumbs.db:encryptable
 Thumbs.db
+
+.idea/
