@@ -126,8 +126,10 @@ source /etc/environment
 alias e='cd /mnt/E/'
 alias code='cd /mnt/E/code/'
 alias copec='cd /mnt/E/code/copec/'
+alias copec-app='cd /mnt/E/code/copec-app/'
 alias copec-up='copec && dc-up && cd -'
 alias sfc='cd /mnt/E/flex/sfc/'
+alias sfap='cd /mnt/E/flex/sfap/'
 alias sfc-up='sfc && dc-up && cd -'
 alias dc-up='docker-compose up -d'
 alias dc-stop='docker-compose stop'
@@ -139,7 +141,23 @@ alias html='cd /var/www/html/'
 # alias packages='linx && cd newoffers-packages/'
 # alias chubaca='e && cd chubaca'
 
+alias pull-barcelos='ssh -t barcelos.concursoscopec.com.br -p 22 -l concursoscopec "cd docker/copec-app; git pull origin main; exit; bash;"'
+alias pull-careiro='ssh -t careiro.concursoscopec.com.br -p 22 -l concursoscopec "cd docker/copec-app; git pull origin main; exit; bash;"'
+alias pull-eirunepe='ssh -t eirupene.concursoscopec.com.br -p 22 -l concursoscopec "cd docker/copec-app; git pull origin main; exit; bash;"'
+alias pull-fonteboa='ssh -t fonteboa.concursoscopec.com.br -p 22 -l concursoscopec "cd docker/copec-app; git pull origin main; exit; bash;"'
+alias pull-humaita='ssh -t humaita.concursoscopec.com.br -p 22 -l concursoscopec "cd docker/copec-app; git pull origin main; exit; bash;"'
+alias pull-japura='ssh -t japura.concursoscopec.com.br -p 22 -l concursoscopec "cd docker/copec-app; git pull origin main; exit; bash;"'
+alias pull-labrea='ssh -t labrea.concursoscopec.com.br -p 22 -l concursoscopec "cd docker/copec-app; git pull origin main; exit; bash;"'
+alias pull-em-tudo='pull-barcelos && pull-careiro && pull-eirunepe && pull-fonteboa '
+alias pull-homolog='ssh -t guajara.concursoscopec.com.br -p 22 -l concursoscopec "cd docker/copec-app; git pull origin homolog; exit; bash;"'
+
+#alias pull-em-tudo='ssh -t barcelos.concursoscopec.com.br -p 22 -l concursoscopec "cd docker/copec-app; git pull origin main; exit; bash;" && ssh -t careiro.concursoscopec.com.br -p 22 -l concursoscopec "cd docker/copec-app; git pull origin main; exit; bash;" && ssh -t eirupene.concursoscopec.com.br -p 22 -l concursoscopec "cd docker/copec-app; git pull origin main; exit; bash;" && ssh -t fonteboa.concursoscopec.com.br -p 22 -l concursoscopec "cd docker/copec-app; git pull origin main; exit; bash;" && ssh -t humaita.concursoscopec.com.br -p 22 -l concursoscopec "cd docker/copec-app; git pull origin main; exit; bash;" && ssh -t ipixuna.concursoscopec.com.br -p 22 -l concursoscopec "cd docker/copec-app; git pull origin main; exit; bash;" && ssh -t japura.concursoscopec.com.br -p 22 -l concursoscopec "cd docker/copec-app; git pull origin main; exit; bash;" && ssh -t labrea.concursoscopec.com.br -p 22 -l concursoscopec "cd docker/copec-app; git pull origin main; exit; bash;"'
+
 alias rmd='rm -Rf '
+
+
+alias push-cascata='git checkout desenvolvimento && git merge desenvolv-ari && git push && git checkout homolog && git merge desenvolvimento && git push && git checkout staging && git merge homolog && git push && git checkout main && git merge staging && git push && git checkout desenvolv-ari' 
+
 
 # export AWS_ACCESS_KEY_ID="ASIAQ55NHU4CQQPFZPNH"
 # export AWS_SECRET_ACCESS_KEY="VYo12eFYbAD2My8zDjaOHiRnDI12L+SUCHYQmoi3"

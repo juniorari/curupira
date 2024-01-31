@@ -23,7 +23,7 @@
 	sslVerify = false
 [core]
 	compression = 0
-	autocrlf = input
+	autocrlf = true
 [push]
 	default = simple
 [init]
@@ -32,3 +32,61 @@
 	spellcheck = false
 [credential]
 	helper = cache
+[safe]
+	directory = /mnt/E/linx/newoffers-inventory
+	directory = /mnt/E/code/copec
+	directory = /mnt/E/flex/sfc
+	directory = /mnt/E/code/copec/177-pss-22
+	directory = /mnt/E/linx/newoffers-inventory_bkp
+	directory = /mnt/E/code/copec/176-conc-22
+	directory = /mnt/E/code/copec/156-pss-tec21
+	directory = /mnt/E/code/copec/172-med-tec/
+	directory = /mnt/E/code/copec/174-ipem-22/
+	directory = /mnt/E/code/copec/174-ipem-22
+	directory = /mnt/E/code/copec/163-pss-hemoam/
+	directory = /mnt/E/code/copec/172-med-tec
+	directory = /mnt/E/linx/newoffers-packages
+	directory = /mnt/E/linx/oms-inventory-hub
+	directory = /mnt/E/linx/newoffers-packages_quase_la_3
+	directory = /mnt/E/linx/demo_test
+	directory = /mnt/E/linx/inventory-packages_new
+	directory = /mnt/E/linx/newoffers-packages_new
+	directory = /mnt/E/linx/remote-config-client-php
+	directory = /mnt/E/code/copec/163-pss-hemoam/
+	directory = /mnt/E/code/copec/168-pss-ead/
+	directory = /mnt/E/code/copec/163-pss-hemoam/
+	directory = /mnt/E/code/copec/163-pss-hemoam
+	directory = /mnt/E/linx/aks-oms-inventory
+	directory = /mnt/E/linx/aks-oms-inventory
+	directory = /mnt/E/flex/portal
+	directory = /mnt/E/code/copec/16
+	directory = /mnt/E/code/copec/166-pss-educ-prof/
+	directory = /mnt/E/code/copec/174-ipem-22/
+	directory = /mnt/E/code/copec/168-pss-ead/
+	directory = /mnt/E/code/copec/168-pss-ead/
+	directory = /mnt/E/code/copec/171-pss-uea/
+	directory = /mnt/E/code/copec/172-med-tec/
+	directory = /mnt/E/code/copec/166-pss-educ-prof
+	directory = /mnt/E/code/copec/168-pss-ead
+	directory = /mnt/E/AndroidProjects/MinhasSenhas6
+	directory = /mnt/E/flex/sfc2
+	directory = /mnt/E/code/looveria
+	directory = /mnt/E/code/copec/178-ipem-23
+	directory = /mnt/E/linx/newoffers_packages_kits
+	directory = /mnt/E/code/copec/179-pss-23
+	directory = /mnt/E/flex/azulejo_yii
+	directory = /mnt/E/flex/sfc3
+	directory = /mnt/E/flex/azulejo
+	directory = /mnt/E/flex/sfap
+	directory = /mnt/E/flex/sfap_ini
+	directory = /mnt/E/flex/azulejo_yii_bkp
+	directory = /mnt/E/code/looveria_300
+	directory = /mnt/E/code/copec/180-ipem-23
+	directory = /mnt/E/code/looveria_v291
+	directory = /mnt/E/code/copec/180-ipem-23/
+	directory = /mnt/E/code/copec/181-pss-assessor
+	directory = /mnt/E/code/copec/157-pss-assessor
+	directory = /mnt/E/code/copec/182-pss-seduc
+	directory = /mnt/E/code/copec-app
+	directory = /mnt/E/code/copec/183-pss-indigena
+	directory = /mnt/E/code/copec/184-pss-cetam
